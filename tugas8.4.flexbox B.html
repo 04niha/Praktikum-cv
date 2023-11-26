@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Flexbox1</title>
+    <style>
+        body{
+            margin: 0;
+
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            
+        }
+        header{
+            background-color: rgb(160, 95, 141);
+            padding: 10px;
+            text-align: center;
+
+        }
+        main{
+            display: flex;
+            flex: 1;
+        }
+        aside{
+            background-color: rgb(124, 44, 92);
+            padding: 10px;
+            text-align: center;
+            flex: 1;
+        }
+        article{
+            background-color: rgb(137, 126, 131);
+            padding: 10px;
+            text-align: center;
+            flex: 3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        img{
+            padding: 20px;
+            max-width: 25%;
+        }
+        footer{
+            background-color: rgb(160, 95, 157);
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header>header</header>
+    <main>
+        <aside>aside</aside>
+        <article>
+            <img src="gambar2.jpg" alt="">
+            <img src="gambar3.jpg" alt="">
+            <img src="gambar1.jpg" alt="">  
+       </article>
+    </main>
+    <footer>footer</footer>
+     </div>  
+</body>
+</html>
