@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var alamat = document.getElementById('alamat').value;
+            var hobby = document.getElementById('hobby').value;
+
+            var nameError = document.getElementById('nameError');
+            var emailError = document.getElementById('emailError');
+            var alamatError = document.getElementById('alamatError');
+            var hobbyError = document.getElementById('hobbyError');
+        
+
+            var isValid = true;
+
+            // Validasi Nama
+            if (name === "") {
+                nameError.innerHTML = "Nama tidak boleh kosong";
+                isValid = false;
+            } else {
+                nameError.innerHTML = "";
+            }
+
+            // Validasi Email
+            if (email === "") {
+                emailError.innerHTML = "Email tidak boleh kosong";
+                isValid = false;
+            } else {
+                emailError.innerHTML = "";
+            }
+
+            // Validasi alamat
+            if (alamat === "") {
+                alamatError.innerHTML = "alamat tidak boleh kosong";
+                isValid = false;
+            } else {
+                alamatError.innerHTML = "";
+            }
+
+            // Validasi Email
+            if (email === "") {
+                emailError.innerHTML = "Email tidak boleh kosong";
+                isValid = false;
+            } else {
+                emailError.innerHTML = "";
+            }
+
+            // Validasi Email
+            if (hobby === "") {
+                hobbyError.innerHTML = "hobby tidak boleh kosong";
+                isValid = false;
+            } else {
+                hobbyError.innerHTML = "";
+            }
+
+            
+
+
+            return isValid;
+        }
+    </script>
+
+    <style>
+        .error {
+            color: red;
+        }
+        
+        
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-right: 2%;
+        }
+        .form-container{
+            background-color: white;
+            padding: 7em;
+            color: black;
+            box-shadow: 0 0 10px rgb(32, 31, 33);
+            width: 500px;
+            margin: 100px auto;
+        }
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+
+    <h2>Formulir Pendaftaran</h2>
+
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name">
+        <span id="nameError" class="error"></span>
+
+        <br>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <span id="emailError" class="error"></span>
+
+        <br>
+        <br>
+
+        <label for="alamat">Alamat:</label>
+        <input type="text" id="alamat" name="alamat">
+        <span id="alamatError" class="error"></span>
+
+        <br>
+        <br>
+
+        <label for="hobby">hobby:</label>
+        <input type="text" id="hobby" name="hobby">
+        <span id="hobbyError" class="error"></span>
+
+        <br>
+        <br>
+
+        
+
+
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+
+   
+
+</body>
+</html>
